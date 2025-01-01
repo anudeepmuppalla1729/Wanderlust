@@ -44,9 +44,9 @@ app.use(express.static(path.join(__dirname,"/public")));
 
 
 //root
-// app.get("/", (req,res)=>{
-//     res.redirect("/listings");
-// })
+app.get("/", (req,res)=>{
+    res.redirect("/listings");
+});
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
